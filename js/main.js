@@ -2,11 +2,8 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
         anchors: ['firstPage', 'secondPage', '3rdPage'],
         sectionsColor: ['rgb(0,204,203)', 'rgb(111,197,230)', 'rgb(255,204,0)'],
-        navigation: true,
-        navigationPosition: 'right',
-        controlArrows:true,
-        navigationTooltips: ['First page', 'Second page', 'Third and last page'],
-        responsive: '100%'
+        slidesNavigation: false,
+        easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
     });
     // 图片加载成功后 居中
     $("img").each(function(index,node){
