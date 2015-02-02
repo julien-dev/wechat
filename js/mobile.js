@@ -11,15 +11,15 @@ var UA = navigator.userAgent.toUpperCase(),
 var data = [{
     'height' : '100%',
     'width' : '100%',
-    'content' : '<div class="screen screen_1"><div class="content"><img class="bg" src="images/mobile_screen_1.png"><div class="down_arrow"><img src="images/down_arrow.png"></div></div></div>'
+    'content' : '<div class="screen screen_1"><div class="content"><img class="bg" src="images/screen_1_bg.png"></div></div>'
 },{
     'height' : '100%',
     'width' : '100%',
-    'content' : '<div class="screen screen_2"><div class="content"><img class="bg" src="images/mobile_screen_2.png"><div class="down_arrow"><img src="images/down_arrow.png"></div></div></div>'
+    'content' : '<div class="screen screen_2"><div class="content"><img class="bg" src="images/screen_2_bg.png"></div></div>'
 },{
     'height' : '100%',
     'width' : '100%',
-    'content' : '<div class="screen screen_3"><div class="content"><img class="bg" src="images/mobile_screen_3.png"><div class="down_arrow"><img src="images/down_arrow.png"></div></div></div>'
+    'content' : '<div class="screen screen_3"><div class="content"><img class="bg" src="images/screen_3_bg.png"></div></div>'
 }];
 
 var iSlider = new iSlider({
