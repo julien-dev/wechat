@@ -10,7 +10,7 @@ var UA = navigator.userAgent.toUpperCase(),
 var data = [{
     'height' : '100%',
     'width' : '100%',
-    'content' : '<div class="screen screen_1"><div class="content"><img class="bg" src="images/screen_1_bg.png"></div></div>'
+    'content' : '<div class="screen screen_1"><div class="content"><img class="bg" src="images/mobile_screen_1.png"></div></div>'
 },{
     'height' : '100%',
     'width' : '100%',
