@@ -18,22 +18,12 @@ $(document).ready(function() {
 //设置图片剧中  无法通过css设置的原因是  css设置了position为absolute bottom为0
     function resizeSlideBg (){
         $("img").each(function(index,node){
-             if(document.body.clientHeight < 350){
+            var clientHeight = document.body.clientHeight ;
+             if(clientHeight <= 1280){
                 $(node).css({
-                    "height":"320px",
+                    "height":clientHeight,
                     "width":"auto"
                 })
-            }else if(document.body.clientHeight < 700){
-                $(node).css({
-                    "height":"640px",
-                    "width":"auto"
-                })
-            }
-             else if(document.body.clientHeight < 1300){
-                 $(node).css({
-                     "height":"1280px",
-                     "width":"auto"
-                 })
              }else{
                 $(node).css({
                     "height":"100%",
