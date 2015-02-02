@@ -1,11 +1,14 @@
+
+
 //Pad端显示PC版页面
 if(document.body.clientWidth > document.body.clientHeight){
    location.href = getRootPath(document)+"/index.html";
 }
-
 var UA = navigator.userAgent.toUpperCase(),
     devicesType = "android";
 (UA.indexOf("IPHONE") > -1 || UA.indexOf("IPAD") > -1) && (devicesType = "iPhone");
+
+
 
 var data = [{
     'height' : '100%',
@@ -14,11 +17,11 @@ var data = [{
 },{
     'height' : '100%',
     'width' : '100%',
-    'content' : '<div class="screen screen_2"><div class="content"><img class="bg" src="images/screen_2_bg.png"></div></div>'
+    'content' : '<div class="screen screen_2"><div class="content"><img class="bg" src="mobile_screen_2.png"></div></div>'
 },{
     'height' : '100%',
     'width' : '100%',
-    'content' : '<div class="screen screen_3"><div class="content"><img class="bg" src="images/screen_3_bg.png"></div></div>'
+    'content' : '<div class="screen screen_3"><div class="content"><img class="bg" src="mobile_screen_3.png"></div></div>'
 }];
 
 var iSlider = new iSlider({
@@ -46,6 +49,11 @@ function getRootPath(doc){
     var projectName=pathName.substring(0,pathName.substr(1).lastIndexOf('/')+1);
     return(localhostPath+projectName+"/");
 }
+$(document).ready(function() {
+
+});
+
+
 
 
 
