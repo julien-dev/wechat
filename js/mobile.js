@@ -1,7 +1,6 @@
 //Pad端显示PC版页面
 if(document.body.clientWidth > document.body.clientHeight){
    location.href = getRootPath(document)+"/index.html";
-
 }
 
 var UA = navigator.userAgent.toUpperCase(),
@@ -47,4 +46,6 @@ function getRootPath(doc){
     var projectName=pathName.substring(0,pathName.substr(1).lastIndexOf('/')+1);
     return(localhostPath+projectName+"/");
 }
+
+
 
