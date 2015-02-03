@@ -1,15 +1,3 @@
-
-
-//Pad端显示PC版页面
-if(document.body.clientWidth > document.body.clientHeight){
-   location.href = getRootPath(document)+"/index.html";
-}
-var UA = navigator.userAgent.toUpperCase(),
-    devicesType = "android";
-(UA.indexOf("IPHONE") > -1 || UA.indexOf("IPAD") > -1) && (devicesType = "iPhone");
-
-
-
 var data = [{
     'height' : '100%',
     'width' : '100%',
