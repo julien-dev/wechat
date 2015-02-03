@@ -62,8 +62,58 @@ html,body{
 .screen_3{
     background: rgb(255,204,0);
 }
+@-webkit-keyframes arrow-move {
+    0% {
+        -webkit-transform: translate3d(0,42px,0);
+        opacity: 0
+    }
 
+    60% {
+        -webkit-transform: translate3d(0,12px,0);
+        opacity: 1
+    }
 
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+        opacity: 0
+    }
+}
+.can-push .slide-arrow, .slide-arrow.can-push {
+    display: block;
+    -webkit-animation: arrow-move 1.5s infinite;
+}
+.can-not-push .slide-arrow,.first .slide-arrow {
+    display: none
+}
+.slide-arrow {
+    position: absolute;
+    width: 17px;
+    height: 18px;
+    bottom: 45px;
+    left: 50%;
+    margin-left: -8px;
+    background: url(../images/down_arrow.png) no-repeat;
+    background-size: 18px auto;
+    z-index: 10;
+    display: none;
+    pointer-events: none;
+}
+@-webkit-keyframes arrow-move {
+    0% {
+        -webkit-transform: translate3d(0,42px,0);
+        opacity: 0
+    }
+
+    60% {
+        -webkit-transform: translate3d(0,12px,0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+        opacity: 0
+    }
+}
 @-webkit-keyframes spin {
     0% {
         -webkit-transform: rotateZ(0)
@@ -82,8 +132,8 @@ html,body{
     height: 20px;
     border-radius: 20px;
     border: 2px solid rgba(130,170,118,0.6);
-    background: url(../images/firstpage-icon.png) no-repeat -30px -5px;
-    background-size: 100px auto;
+    background: url(../images/music_icon.png) no-repeat;
+    background-size: 20px auto;
     position: absolute;
     top: 10px;
     right: 10px;
