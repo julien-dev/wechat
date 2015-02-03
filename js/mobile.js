@@ -101,6 +101,7 @@ $(document).ready(function() {
                 music.volume = 0.5;
                 if (music.paused) {
                     music.play();
+                    musicIcon.addClass("play");
                 }
             }
         );
@@ -108,8 +109,10 @@ $(document).ready(function() {
     musicIcon.click(function(e){
         if (music.paused) {
             music.play();
+            musicIcon.addClass("play");
         }else{
             music.pause();
+            musicIcon.removeClass("play");
         }
     })
 
