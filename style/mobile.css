@@ -85,7 +85,13 @@ html,body{
     background: rgb(111,197,230);
 }
 .screen_3{
-    background: rgb(255,204,0);
+    background: rgb(218,174,3);
+}
+.screen_3{
+    background: rgb(218,174,3);
+}
+.screen_4{
+    background: rgb(186,167,233);
 }
 
 .can-push .slide-arrow, .slide-arrow.can-push {

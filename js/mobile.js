@@ -10,6 +10,10 @@ var data = [{
     'height' : '100%',
     'width' : '100%',
     'content' : '<div class="screen screen_3"><div class="content"><img class="bg" src="images/screen_3.png"></div></div>'
+},{
+    'height' : '100%',
+    'width' : '100%',
+    'content' : '<div class="screen screen_4"><div class="content"><img class="bg" src="images/screen_4.png"></div></div>'
 }];
 var jBody = $("body") ;
 
@@ -31,7 +35,7 @@ var iSlider = new iSlider({
         jBody.addClass("can-not-push");
     },
     onslideend:function(e){
-        if(curNum===2){
+        if(curNum===3){
             jBody.removeClass("can-push");
             jBody.addClass("can-not-push");
         }
@@ -98,13 +102,17 @@ $(document).ready(function() {
     if ( !ua.ios ) {
         music.addEventListener("loadeddata", function()
             {
-                music.volume = 0.5;
+                if(music.volume<0.1){ music.volume = 0.5;}
                 if (music.paused) {
                     music.play();
                     musicIcon.addClass("play");
                 }
             }
         );
+    }
+    else{
+        music.play();
+        musicIcon.addClass("play");
     }
     musicIcon.click(function(e){
         if (music.paused) {
