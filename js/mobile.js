@@ -39,8 +39,8 @@
 })( navigator.userAgent, navigator.appVersion, navigator.platform );
 var dataForWeixin={
     appId:"",
-    MsgImg:"images/screen_1.png",
-    TLImg:"images/screen_1.png",
+    MsgImg:"images/MRSImg.png",
+    TLImg:"images/TLImg.png",
     url:getRootPath,
     title:"经纪业务学习平台邀请函",
     desc:"经纪业务学习平台邀请函",
@@ -125,7 +125,7 @@ $(document).ready(function() {
     var jBody = $("body") ;
 
     var curNum = 0 ;
-    var iSlider = new iSlider({
+    var iSlider = new window.iSlider({
         dom : document.getElementById('container'),
         data : data,
         type:"dom",
