@@ -50,22 +50,12 @@ var dataForWeixin={
 // 开启Api的debug模式
 WeixinApi.enableDebugMode();
 // 给按钮增加click事件：请不要太纠结这个写法，demo而已
-var addEvent = function(elId,listener){
-    document.getElementById(elId)
-        .addEventListener('click',function(e){
-            if(!window.WeixinApi || !window.WeixinJSBridge) {
-                alert('请确认您是在微信内置浏览器中打开的，并且WeixinApi.js已正确引用');
-                e.preventDefault();
-                return false;
-            }
-            listener(this,e);
-        },false);
-};
+if(!window.WeixinApi || !window.WeixinJSBridge) {
+    alert('请确认您是在微信内置浏览器中打开的，并且WeixinApi.js已正确引用');
+
+}
 // 刷新
-addEvent('refresh',function(el,e){
-    e.preventDefault();
-    location.replace('?' + Math.random(),true);
-});
+//location.replace('?' + Math.random(),true);
 // 需要分享的内容，请放到ready里
 WeixinApi.ready(function(Api) {
     // 微信分享的数据
