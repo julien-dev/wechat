@@ -37,9 +37,10 @@
         msPointer : window.navigator.msPointerEnabled
     }
 })( navigator.userAgent, navigator.appVersion, navigator.platform );
-// 开启Api的debug模式
-WeixinApi.enableDebugMode();
-if(window.WeixinApi && window.WeixinJSBridge) {
+
+if(WeixinApi) {
+    // 开启Api的debug模式
+    WeixinApi.enableDebugMode();
     WeixinApi.ready(function(Api) {
         // 微信分享的数据
         var wxData = {
@@ -76,7 +77,6 @@ if(window.WeixinApi && window.WeixinJSBridge) {
         // 点击分享到腾讯微博，会执行下面这个代码
         Api.shareToWeibo(wxData, wxCallbacks);
         // iOS上，可以直接调用这个API进行分享，一句话搞定
-
         if ( ua.ios ) {
             Api.generalShare(wxData,wxCallbacks);
         }
