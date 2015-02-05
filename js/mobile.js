@@ -102,8 +102,7 @@ function getRootPath(doc){
     alert(curWwwPath)
     var pathName=doc.location.pathname;
     alert(pathName)
-    var pos=curWwwPath.indexOf(pathName);
-
+    var pos=curWwwPath.lastIndexOf(pathName);
     var localhostPath=curWwwPath.substring(0,pos);
     alert(localhostPath)
     var projectName=pathName.substring(0,pathName.substr(1).lastIndexOf('/')+1);
