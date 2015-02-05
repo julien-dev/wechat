@@ -41,33 +41,40 @@
 if(WeixinApi) {
     // 开启Api的debug模式
     WeixinApi.enableDebugMode();
+    alert("微信API注册成功");
+    // 微信分享的数据
+    var wxData = {
+        "appId": "", // 服务号可以填写appId
+        "imgUrl" : getRootPath(document)+'images/TLImg.png',
+        "link" : document.location.href,
+        "desc" : '经纪业务学习平台邀请函',
+        "title" : "经纪业务学习平台邀请函"
+    };
     WeixinApi.ready(function(Api) {
-        // 微信分享的数据
-        var wxData = {
-            "appId": "", // 服务号可以填写appId
-            "imgUrl" : getRootPath(document)+'images/TLImg.png',
-            "link" : document.location.href,
-            "desc" : '经纪业务学习平台邀请函',
-            "title" : "经纪业务学习平台邀请函"
-        };
+
         // 分享的回调
         var wxCallbacks = {
             // 收藏操作是否触发回调，默认是开启的
             favorite : false,
             // 分享操作开始之前
             ready : function() {
+                alert("分享开始");
             },
             // 分享被用户自动取消
             cancel : function(resp) {
+                alert("分享取消");
             },
             // 分享失败了
             fail : function(resp) {
+                alert("分享失败");
             },
             // 分享成功
             confirm : function(resp) {
+                alert("分享成功");
             },
             // 整个分享过程结束
             all : function(resp,shareTo) {
+                alert("分享完成");
             }
         };
         // 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
@@ -77,9 +84,7 @@ if(WeixinApi) {
         // 点击分享到腾讯微博，会执行下面这个代码
         Api.shareToWeibo(wxData, wxCallbacks);
         // iOS上，可以直接调用这个API进行分享，一句话搞定
-        if ( ua.ios ) {
-            Api.generalShare(wxData,wxCallbacks);
-        }
+        Api.generalShare(wxData,wxCallbacks);
     });
 }
 // 刷新
