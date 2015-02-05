@@ -99,10 +99,16 @@ WeixinApi.ready(function(Api) {
 });
 function getRootPath(doc){
     var curWwwPath=doc.location.href;
+    alert(curWwwPath)
     var pathName=doc.location.pathname;
+    alert(pathName)
     var pos=curWwwPath.indexOf(pathName);
+
     var localhostPath=curWwwPath.substring(0,pos);
+    alert(localhostPath)
     var projectName=pathName.substring(0,pathName.substr(1).lastIndexOf('/')+1);
+    alert(projectName)
+    alert(localhostPath+projectName+"/");
     return(localhostPath+projectName+"/");
 }
 $(document).ready(function() {
