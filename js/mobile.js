@@ -37,22 +37,11 @@
         msPointer : window.navigator.msPointerEnabled
     }
 })( navigator.userAgent, navigator.appVersion, navigator.platform );
-var dataForWeixin={
-    appId:"",
-    MsgImg:"images/MRSImg.png",
-    TLImg:"images/TLImg.png",
-    url:getRootPath,
-    title:"经纪业务学习平台邀请函",
-    desc:"经纪业务学习平台邀请函",
-    fakeid:"",
-    callback:function(){}
-};
 // 开启Api的debug模式
 WeixinApi.enableDebugMode();
 // 给按钮增加click事件：请不要太纠结这个写法，demo而已
 if(!window.WeixinApi || !window.WeixinJSBridge) {
     alert('请确认您是在微信内置浏览器中打开的，并且WeixinApi.js已正确引用');
-
 }
 // 刷新
 //location.replace('?' + Math.random(),true);
@@ -61,7 +50,7 @@ WeixinApi.ready(function(Api) {
     // 微信分享的数据
     var wxData = {
         "appId": "", // 服务号可以填写appId
-        "imgUrl" : 'images/TLImg.png',
+        "imgUrl" : getRootPath(document)+'images/TLImg.png',
         "link" : getRootPath(document),
         "desc" : '经纪业务学习平台邀请函',
         "title" : "经纪业务学习平台邀请函"
