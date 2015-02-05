@@ -62,7 +62,7 @@ WeixinApi.ready(function(Api) {
     var wxData = {
         "appId": "", // 服务号可以填写appId
         "imgUrl" : 'images/TLImg.png',
-        "link" : getRootPath(),
+        "link" : getRootPath(document),
         "desc" : '经纪业务学习平台邀请函',
         "title" : "经纪业务学习平台邀请函"
     };
