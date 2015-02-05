@@ -122,7 +122,9 @@ $(document).ready(function() {
             musicIcon.removeClass("play");
         }
     })
-    if(WeixinApi&&window.WeixinJSBridge&&ua.MicroMessenger) {
+    alert(window.WeixinJSBridge)
+    alert(ua.MicroMessenger)
+    if(WeixinApi&&window.WeixinJSBridge&&!ua.MicroMessenger) {
         // 开启Api的debug模式
         WeixinApi.enableDebugMode();
         alert("微信API注入成功");
